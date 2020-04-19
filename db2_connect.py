@@ -3,7 +3,7 @@ import ibm_db,getpass
 password = getpass.getpass("Password:")
 # password = ''
 
-connstr = r'DATABASE=ODS;HOSTNAME=commander.rtp.dst.ibm.com;PORT=61010;PROTOCOL=TCPIP;UID=baiyx;PWD=' + password + r';SECURITY=SSL;SSLCLIENTKEYSTOREDB=C:\Work\DBA\DB2\SSL\kdb\mydbclient.kdb;SSLCLIENTKEYSTASH=C:\Work\DBA\DB2\SSL\kdb\mydbclient.sth;'
+connstr = r'DATABASE=ODS;HOSTNAME=tbird.sl.bluecloud.ibm.com;PORT=61000;PROTOCOL=TCPIP;UID=baiyx;PWD=' + password + r';SECURITY=SSL;SSLCLIENTKEYSTOREDB=/Users/arthur/Documents/Work/DBA/DB2/ssl/mydbclient.kdb;SSLCLIENTKEYSTASH=/Users/arthur/Documents/Work/DBA/DB2/ssl/mydbclient.sth;'
 conn = ibm_db.connect(connstr, "", "")
 if conn:
     sql = "SELECT * from syscat.tables fetch first 10 rows only with ur"
